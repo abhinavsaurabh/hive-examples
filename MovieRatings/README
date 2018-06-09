@@ -30,6 +30,34 @@ _______________________________________
 Step 3: Create table on hive           |
 _______________________________________|
 Get the sql files from HQLFile directory
+
+Run the following hive command to create the tables in hive
+
 hive -f createTables.sql
 
 You can enter into hive shell and check the tables
+
+_______________________________________
+Step 3: Find top viewed movies        
+_______________________________________
+
+Run the following command to get top mostly viewed movies
+
+hive -f Top10Movies.sql
+
+_______________________________________
+Step 4: Find top rated  movies        
+_______________________________________
+
+Run the following command to get top rated movies
+
+hive -f TopRatedMovies.sql
+
+
+_______________________________________
+Step 5:Get the ranking based on occupation and age group       
+_______________________________________
+
+Run the following command to get top rated movies
+
+hive -f MovieGenreRanking.sql
