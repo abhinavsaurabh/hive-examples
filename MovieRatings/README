@@ -1,0 +1,35 @@
+In all the data sets (movies.dat, ratings.data, users.dat),"::" is used as delimiter.
+But hive doesn't properly interpret ::, so replace :: with ,(comma)  in all the data sets
+
+Run the below command to replace "::" with ,(comma)
+sed -i 's/::/,/g' <filename>
+
+Create the following directories on HDFS. (I am creating directories under /user/hive folder on HDFS. You can create under any folder)
+
+_______________________________________
+Step 1: Create Directories on HDFS    |
+______________________________________|
+hdfs dfs -mkdir /user/hive/movies
+
+hdfs dfs -mkdir /user/hive/ratings
+
+hdfs dfs -mkdir /user/hive/users
+
+_______________________________________
+Step 2: Push data to HDFS             |
+______________________________________|
+Put the movies, ratings and users data into their respective hdfs folders
+
+hdfs dfs -put <path to movies.dat file> /user/hive/movies
+
+hdfs dfs -put <path to ratings.dat file> /user/hive/ratings
+
+hdfs dfs -put <path to users.dat file> /user/hive/users
+
+_______________________________________
+Step 3: Create table on hive           |
+_______________________________________|
+Get the sql files from HQLFile directory
+hive -f createTables.sql
+
+You can enter into hive shell and check the tables

@@ -1,0 +1,9 @@
+
+Download the data set  from the link : http://grouplens.org/datasets/movielens/1m/
+
+1.Top ten most viewed movies with their movies Name (Ascending or Descending order)
+
+2. Top twenty rated movies (Condition: The movie should be rated/viewed by at least 40 users)
+
+3. How the geners are ranked by average rating for each profession, age and group. The age groups to be considered are 18-35,36-50 and 50+
+Output should have the following columns Occupation,AgeGroup,Genre,Rank
